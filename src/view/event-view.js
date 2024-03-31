@@ -1,8 +1,8 @@
-import { createElement } from '../render.js';
 import { humanizeDate, getDateDifference } from '../utils.js';
 import { mockOffers } from '../mock/offers.js';
 import { mockDestinations } from '../mock/destinations.js';
 import { DATE_FORMAT_DAY, DATE_FORMAT_HOURS } from '../const.js';
+import AbstractView from '../framework/view/abstract-view.js';
 
 function getEventTypeOffer(event) {
   return mockOffers.find((offer) => offer.type === event.type);
@@ -80,24 +80,23 @@ function createEventTemplate(event) {
   `);
 }
 
-export default class EventView {
-  constructor({event}) {
-    this.event = event;
+export default class EventView extends AbstractView {
+  #event = null;
+  #handleClick = null;
+
+  constructor({event, onClick}) {
+    super();
+    this.#event = event;
+    this.#handleClick = onClick;
+    this.element.querySelector('.event__rollup-btn').addEventListener('click', this.#clickHandler);
   }
 
-  getTemplate() {
-    return createEventTemplate(this.event);
+  get template() {
+    return createEventTemplate(this.#event);
   }
 
-  getElement() {
-    if (!this.element) {
-      this.element = createElement(this.getTemplate());
-    }
-
-    return this.element;
-  }
-
-  removeElement() {
-    this.element = null;
-  }
+  #clickHandler = (evt) => {
+    evt.preventDefault();
+    this.#handleClick();
+  };
 }
