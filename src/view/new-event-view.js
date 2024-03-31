@@ -1,4 +1,4 @@
-import { createElement } from '../render.js';
+import AbstractView from '../framework/view/abstract-view.js';
 
 function createNewEventTemplate() {
   return (
@@ -167,20 +167,8 @@ function createNewEventTemplate() {
   );
 }
 
-export default class NewEventView {
-  getTemplate() {
+export default class NewEventView extends AbstractView {
+  get template() {
     return createNewEventTemplate();
-  }
-
-  getElement() {
-    if (!this.element) {
-      this.element = createElement(this.getTemplate());
-    }
-
-    return this.element;
-  }
-
-  removeElement() {
-    this.element = null;
   }
 }

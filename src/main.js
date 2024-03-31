@@ -1,6 +1,6 @@
 import TripInfoView from './view/trip-info-view.js';
 import FilterView from './view/filter-view.js';
-import { RenderPosition, render } from './render.js';
+import { RenderPosition, render } from './framework/render.js';
 import EventsPresenter from './presenter/events-presenter.js';
 import EventsModel from './model/events-model.js';
 
