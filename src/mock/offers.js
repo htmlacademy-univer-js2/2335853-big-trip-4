@@ -11,7 +11,7 @@ const mockOffers = [
     offers: [
       {
         id: 1,
-        title: 'Offer',
+        title: 'Offer Taxi',
         price: getRandomInteger(OfferPrice.MIN, OfferPrice.MAX)
       }
     ]
@@ -21,7 +21,7 @@ const mockOffers = [
     offers: [
       {
         id: 1,
-        title: 'Offer',
+        title: 'Offer Bus',
         price: getRandomInteger(OfferPrice.MIN, OfferPrice.MAX)
       }
     ]
@@ -31,7 +31,7 @@ const mockOffers = [
     offers: [
       {
         id: 1,
-        title: 'Offer',
+        title: 'Offer Train',
         price: getRandomInteger(OfferPrice.MIN, OfferPrice.MAX)
       }
     ]
@@ -41,7 +41,7 @@ const mockOffers = [
     offers: [
       {
         id: 1,
-        title: 'Offer',
+        title: 'Offer Ship',
         price: getRandomInteger(OfferPrice.MIN, OfferPrice.MAX)
       }
     ]
@@ -51,7 +51,7 @@ const mockOffers = [
     offers: [
       {
         id: 1,
-        title: 'Offer',
+        title: 'Offer Drive',
         price: getRandomInteger(OfferPrice.MIN, OfferPrice.MAX)
       }
     ]
@@ -61,7 +61,7 @@ const mockOffers = [
     offers: [
       {
         id: 1,
-        title: 'Offer',
+        title: 'Offer Flight',
         price: getRandomInteger(OfferPrice.MIN, OfferPrice.MAX)
       }
     ]
@@ -71,7 +71,7 @@ const mockOffers = [
     offers: [
       {
         id: 1,
-        title: 'Offer',
+        title: 'Offer Check-in',
         price: getRandomInteger(OfferPrice.MIN, OfferPrice.MAX)
       }
     ]
@@ -81,7 +81,7 @@ const mockOffers = [
     offers: [
       {
         id: 1,
-        title: 'Offer',
+        title: 'Offer Sightseeing',
         price: getRandomInteger(OfferPrice.MIN, OfferPrice.MAX)
       }
     ]
@@ -91,7 +91,7 @@ const mockOffers = [
     offers: [
       {
         id: 1,
-        title: 'Offer',
+        title: 'Offer Restaurant',
         price: getRandomInteger(OfferPrice.MIN, OfferPrice.MAX)
       }
     ]
